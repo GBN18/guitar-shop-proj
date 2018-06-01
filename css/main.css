@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#wrapper {
+    width: 1200px;
+    border: solid 1px;
+    margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#login {
+    border: solid 1px red;
+    position: relative;
+    top: 40%;
+}
+
+#login > form {
+    text-align: center;
+    border: solid 1px darkgreen;
+    width: 300px;
+    margin: 0 auto;
+}
