@@ -13,6 +13,7 @@ html, body {
     margin: 0 auto;
     height: 100%;
     box-sizing: border-box;
+    background-image: url("/image/guitar-bg.jpg");
 }
 
 #login {
@@ -26,4 +27,10 @@ html, body {
     border: solid 1px darkgreen;
     width: 300px;
     margin: 0 auto;
+    background-color: wheat;
+    padding: 20px;
+}
+
+body {
+    background-image: url("../image/guitar-bg.jpg");
 }
