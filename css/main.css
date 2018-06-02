@@ -13,7 +13,10 @@ html, body {
     margin: 0 auto;
     height: 100%;
     box-sizing: border-box;
-    background-image: url("/image/guitar-bg.jpg");
+}
+
+h1 {
+    color: white;
 }
 
 #login {
