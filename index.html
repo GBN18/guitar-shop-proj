@@ -7,12 +7,31 @@
     <title>Guitar shop</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/guitar.js"></script>
 </head>
 <body>
 
 <div id="wrapper">
-    <h1>Hello, world!</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Guitar list</a>
+                <a href="basket.html">Basket</a>
+                <a href="about.html">About Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to GBN guitar shop!</h1>
+
+    <ul id="guitar-list">
+    </ul>
 </div>
 
+<script type="text/javascript">
+  $(function () {
+    listGuitar()
+  });
+</script>
 </body>
 </html>

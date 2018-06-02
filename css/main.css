@@ -7,16 +7,22 @@ html, body {
     height: 100%;
 }
 
+body {
+    background-image: url("../image/guitar-bg.jpg");
+    background-size: contain;
+}
+
 #wrapper {
     width: 1200px;
     border: solid 1px;
     margin: 0 auto;
-    height: 100%;
     box-sizing: border-box;
+    background-color: wheat;
 }
 
 h1 {
-    color: white;
+    color: black;
+    text-align: center;
 }
 
 #login {
@@ -34,6 +40,44 @@ h1 {
     padding: 20px;
 }
 
-body {
-    background-image: url("../image/guitar-bg.jpg");
+#guitar-list > li {
+    margin: 30px;
+    padding: 10px;
+    border-bottom: solid 1px;
+    background-color: #ffb667;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    transition: all .2s ease-in-out;
+}
+
+#guitar-list > li:hover {
+    background-color: greenyellow;
+    /*margin: 15px;*/
+    /*zoom: 110%;*/
+    transform: scale(1.05);
+}
+
+#guitar-list > li > h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+#guitar-list > li > div {
+    display: flex;
+    flex-direction: row;
+}
+
+#guitar-list > li > div > p {
+    padding: 10px;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+#guitar-list > li > div > img {
+    height: 200px;
+    width: 400px;
+    border: solid 5px black;
+    border-radius: 10px;
 }
