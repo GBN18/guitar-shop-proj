@@ -192,6 +192,7 @@ function formatGuitarItem(guitar) {
             <img src="image/guitar/` + guitar.id + `.jpg" alt="` + guitar.name + `">
             <p>` + guitar.description + `</p>
           </div>
+          <button type="button" onclick="addToBasket(${guitar.id})">Add to basket</button>
       </li>
     `;
 }
