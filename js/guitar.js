@@ -149,7 +149,7 @@ const guitars = [
 const maxItemPerPage = 5;
 
 function listGuitar() {
-  for (i = 0; i < maxItemPerPage; i++) {
+  for (let i = 0; i < maxItemPerPage; i++) {
     let guitar = getGuitars()[i + (getPageNumber() - 1) * 5];
     if (typeof guitar === "undefined") {
       continue;
@@ -157,8 +157,8 @@ function listGuitar() {
     $("#guitar-list").append(formatGuitarItem(guitar));
   }
   $(".list-navigation")
-    .append(getNextButton())
-    .append(getBackButton());
+    .append(getBackButton())
+    .append(getNextButton());
 
   $(".category-list")
     .append(getCategoryLink(catAll))
@@ -199,12 +199,14 @@ function formatGuitarItem(guitar) {
 
 function getCategoryLink(catName) {
   let cat = '';
+  let selected = '';
   if (getCategory() === catName) {
+    selected = 'class="selected"';
     cat = catName;
   } else {
     cat = `<a href="index.html?page=1&cat=` + catName + `">` + catName + `</a>`;
   }
-  return `<li class="selected">` + cat + `</li>`;
+  return `<li ${selected}>${cat}</li>`;
 }
 
 function getNextButton() {
@@ -232,19 +234,19 @@ function getPageNumber() {
   let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
   for (let i = 0; i < hashes.length; i++) {
     hash = hashes[i].split('=');
-    if (hash[0] == 'page') {
-      let number = isNaN(hash[1]) || hash[1] == 0 ? 1 : hash[1];
+    if (hash[0] === 'page') {
+      let number = isNaN(hash[1]) || hash[1] === 0 ? 1 : hash[1];
       return number > getMaxPage() ? parseInt(getMaxPage()) : parseInt(number);
     }
   }
-  return 0;
+  return 1;
 }
 
 function getCategory() {
   let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
   for (let i = 0; i < hashes.length; i++) {
     hash = hashes[i].split('=');
-    if (hash[0] == 'cat') {
+    if (hash[0] === 'cat') {
       switch (hash[1]) {
         case catClassic:
         case catSpecial:
@@ -258,5 +260,5 @@ function getCategory() {
 }
 
 function formatGuitarListNavigation(name, url) {
-  return `<li><a href='${url}'>${name}</a></li>`;
+  return `<a class='${name}' href='${url}'>${name}</a>`;
 }

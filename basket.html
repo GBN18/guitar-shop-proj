@@ -11,8 +11,11 @@
     <script src="js/basket.js"></script>
     <script type="text/javascript">
       $(function () {
-        listGuitar();
         updateBasketCount();
+        listBasket();
+        enableBasketButtons();
+        $("#order-button").click(sendBasket);
+        $("#clear-basket").click(clearBasket);
       });
     </script>
 </head>
@@ -34,19 +37,25 @@
                 <a href="login.html">Logout</a>
             </li>
             <li>
-                <h1>Welcome to the guitar shop!</h1>
+                <h1>Thank you for your order!</h1>
             </li>
         </ul>
     </nav>
 
-
-    <ul class="category-list">
+    <ul id="basket">
+        <li>
+            <button id="order-button" type="button" disabled>order now!</button>
+            <button id="clear-basket" type="button" disabled>clear basket</button>
+        </li>
     </ul>
-    <ul id="guitar-list">
-    </ul>
-    <div class="list-navigation">
+    <div>
     </div>
 </div>
 
+<script type="text/javascript">
+  $(function () {
+    listGuitar();
+  });
+</script>
 </body>
 </html>

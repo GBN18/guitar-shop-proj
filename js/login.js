@@ -3,12 +3,11 @@ const users = [
   {user: "mbn18", pass: "qwerty"}
 ];
 
+const userKey = 'logged';
 
 // Wait for DOM to load
 $(function () {
   redirectToLoginIfUnauthorized();
-  // catch click
-  $("#login button").click(login);
 });
 
 function redirectToLoginIfUnauthorized() {
@@ -21,12 +20,16 @@ function redirectToLoginIfUnauthorized() {
   }
 }
 
+function logout() {
+  localStorage.removeItem(userKey);
+}
+
 function login() {
   username = $("#username");
   password = $("#password");
 
   if (isUserValid(username, password)) {
-    localStorage.setItem("logged", username.val());
+    localStorage.setItem(userKey, username.val());
     window.location.replace("index.html");
   }
   alert("Wrong user password!");
@@ -34,11 +37,15 @@ function login() {
 
 function isUserValid(username, password) {
   for (n = 0; n < users.length; n++) {
-    if (username.val() == users[n].user) {
-      if (password.val() == users[n].pass) {
+    if (username.val() === users[n].user) {
+      if (password.val() === users[n].pass) {
         return true;
       }
     }
   }
   return false;
+}
+
+function getUserName() {
+  return localStorage.getItem(userKey);
 }

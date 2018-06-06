@@ -14,10 +14,14 @@ body {
 
 #wrapper {
     width: 1200px;
-    border: solid 1px;
     margin: 0 auto;
     box-sizing: border-box;
     background-color: wheat;
+}
+
+#wrapper.login {
+    height: 100%;
+    background-color: transparent;
 }
 
 h1 {
@@ -26,21 +30,31 @@ h1 {
 }
 
 #login {
-    border: solid 1px red;
     position: relative;
     top: 40%;
 }
 
 #login > form {
     text-align: center;
-    border: solid 1px darkgreen;
     width: 300px;
     margin: 0 auto;
     background-color: wheat;
     padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-#guitar-list > li {
+#login > form input {
+    margin: 5px 0;
+}
+
+#login > form button {
+    margin-top: 10px;
+    float: none;
+}
+
+
+#guitar-list > li, #basket > li {
     margin: 30px;
     padding: 10px;
     border-bottom: solid 1px;
@@ -49,6 +63,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
     transition: all .2s ease-in-out;
+    overflow: hidden;
 }
 
 #guitar-list > li:hover {
@@ -80,4 +95,105 @@ h1 {
     width: 400px;
     border: solid 5px black;
     border-radius: 10px;
+}
+
+button {
+    float: right;
+    padding: 5px;
+    background-color: #dfffd3;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+#basket > li {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-shadow: none;
+}
+
+#basket > li:last-child {
+    display: block;
+    background-color: transparent;
+    border: none;
+}
+
+#basket > li > h3 {
+    margin-left: 20px;
+    line-height: 70px;
+}
+
+#basket > li > img {
+    width: 150px;
+    border: solid 2px deeppink;
+    border-radius: 15px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: #ffb667;
+}
+
+nav > ul > li {
+    padding: 10px;
+    margin: 10px;
+    background-color: snow;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+nav > ul > li:last-child {
+    background-color: transparent;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > ul > li:hover {
+    background-color: greenyellow;
+}
+
+.category-list {
+    margin: 30px 20px 0;
+    display: flex;
+    list-style: none;
+}
+
+.category-list > li {
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffb667;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.category-list > li.selected {
+    background-color: greenyellow;
+}
+
+.category-list > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-navigation {
+    padding: 0 40px 20px;
+    overflow: hidden;
+}
+
+.list-navigation > a {
+    padding: 10px;
+    background-color: #dfffd3;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+.list-navigation > a.Back {
+    float: left;
 }
