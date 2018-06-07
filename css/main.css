@@ -53,8 +53,21 @@ h1 {
     float: none;
 }
 
+article {
+    overflow: hidden;
+}
 
-#guitar-list > li, #basket > li {
+article > img {
+    height: 200px;
+    float: right;
+    border-radius: 10px;
+}
+
+article > p {
+    margin: 5px 0;
+}
+
+#guitar-list > li, #basket > li, article {
     margin: 30px;
     padding: 10px;
     border-bottom: solid 1px;
@@ -68,8 +81,6 @@ h1 {
 
 #guitar-list > li:hover {
     background-color: greenyellow;
-    /*margin: 15px;*/
-    /*zoom: 110%;*/
     transform: scale(1.05);
 }
 
@@ -125,6 +136,7 @@ button {
 
 #basket > li > img {
     width: 150px;
+    height: 100%;
     border: solid 2px deeppink;
     border-radius: 15px;
 }
@@ -194,6 +206,7 @@ nav > ul > li:hover {
     color: black;
     float: right;
 }
+
 .list-navigation > a.Back {
     float: left;
 }

@@ -31,8 +31,9 @@ function login() {
   if (isUserValid(username, password)) {
     localStorage.setItem(userKey, username.val());
     window.location.replace("index.html");
+  } else {
+    alert("Wrong user password!");
   }
-  alert("Wrong user password!");
 }
 
 function isUserValid(username, password) {

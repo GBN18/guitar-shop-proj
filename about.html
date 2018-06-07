@@ -5,34 +5,49 @@
 <head>
     <meta charset="UTF-8">
     <title>About us</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/guitar.js"></script>
+    <script src="js/basket.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        listGuitar();
+        updateBasketCount();
+      });
+    </script>
 </head>
 <body>
 
-<div id="wrapper">
-    <ul>
-        <li>
-            <a href="index.html">Guitar list</a>
-        </li>
-        <li>
-            <a href="basket.html">Basket (<span id="items-in-basket">0</span>)</a>
-        </li>
-        <li>
-            <a href="about.html">About Us</a>
-        </li>
-        <li>
-            <a href="login.html">Logout</a>
-        </li>
-        <li>
-            <h1>About Us</h1>
-        </li>
-    </ul>
+<div id="wrapper" style="height: 100%">
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Guitar list</a>
+            </li>
+            <li>
+                <a href="basket.html">Basket (<span id="items-in-basket">0</span>)</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="login.html">Logout</a>
+            </li>
+            <li>
+                <h1>About Us</h1>
+            </li>
+        </ul>
+    </nav>
 
-    <p>The Guitar Shop is a small shop located in har vagai, israel.</p>
-    <p>The shop was co-founded by the brilliant programmer Gavriel Ben-Nes.</p>
-    <p>We sale all kind of guitars in a decent price!</p>
-    <p>We make our guitars from the most exotic materials.</p>
-    <p>All the of out guitars were tested by experts.</p>
-    <p>So what are you waiting for? Go and get our amazing deals!</p>
+    <article>
+        <img src="image/guitar/5.jpg" alt="guitar on flame">
+        <p>The Guitar Shop is a small shop located in har vagai, israel.</p>
+        <p>The shop was co-founded by the brilliant programmer Gavriel Ben-Nes.</p>
+        <p>We sale all kind of guitars in a decent price!</p>
+        <p>We make our guitars from the most exotic materials.</p>
+        <p>All the of out guitars were tested by experts.</p>
+        <p>So what are you waiting for? Go and get our amazing deals!</p>
+    </article>
 </div>
 
 </body>
